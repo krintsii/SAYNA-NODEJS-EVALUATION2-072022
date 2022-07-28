@@ -1,0 +1,86 @@
+<htlm>
+
+	<head>
+		
+		<title> D- CLIC  </title>
+        <link rel="stylesheet" href="style.css">
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	</head>
+
+	<body>
+		
+		<div class ="container"> 
+			<div class ="menu"> 
+	            <ul>
+	            	<li class="logo"> <img src="./image/sayna.jpg"> </li>
+	            	<li> <a href="/home"> Home </a> </li>
+	            	<li> <a href="/backend"> BackEnd </a> </li>
+	            	<li> <a href="/frontend"> FrontEnd </a> </li>
+					<li> <a href="/marketing"> Marketing Digital </a> </li>
+					<li> <a href="/uxui"> UX/UI </a> </li>
+	            	<li> <a href="/contact"> Contact </a> </li>
+	            	<li> <a href = "/signup" class="signup-btn"> <span> Sign Up </span> </a> </li>
+	            </ul>
+
+			</div>
+
+			<div class = "banner" > 
+
+				<div class="app-text"> 
+						<h2> D-CLIC <br> Venez coder le serveur avec nous </h2>
+						<p>Devenir spécialistes du développement web côté client, <br> ici c’est votre espace </p>
+						<div class="play-btn"> 
+							<div class="play-btn-inner"> 
+								
+							</div>
+						</div>
+				</div>
+
+				<div class="app-picture-frontend" >
+					<img src="./image/image_frontend.jpg">
+				</div>
+
+
+				<body>
+					<div class="flip-box">
+					  <div class="flip-box-inner">
+						<div class="flip-box-front">
+						  <h2 style="font-family: 'Space Grotesk';">Les avis et les Note </h2>
+						  <img src="https://static.vecteezy.com/ti/photos-gratuite/p1/3149527-nlp-natural-language-processing-cognitive-computing-technology-photo.jpg" alt="" width="800px" height="500rem">
+						</div>
+						<div class="flip-box-back">
+						 
+						  <div id="avis">
+							<h1 style="color: black; font-family: 'Space Grotesk';">Voici les avis de tous les Apprenants team FRONT-END</h1>
+							<% notice.forEach(avi=> { %>
+								<div class="d-flex ejs mt-1 mb-1">
+									<div style="background-color: transparent;">
+										<h6 style="color: rgb(0, 0, 0);" class="me-2 ms-2 fw-bold fs-5 text-uppercase">  <%= avi.LastName %> </h6>
+										<h6 style="color: rgba(32, 72, 129, 0.455);" class="me-2 ms-2 fw-bold fs-6"> <%= avi.FirstName %> </h6>
+										<h6 style="color: rgb(32, 73, 129);" class="me-2 ms-2 fw-bold fs-5 text-uppercase">  <%= avi.formation %> </h6>
+										<h6 style="color: rgb(32, 129, 81);" class="me-2 ms-2 fw-bold fs-5"> <%= avi.Avis %> !!!!!</h6>
+									</div>
+									<div  style="background-color: transparent;">
+										<h6 style="color: rgb(32, 73, 129);" class="me-2 ms-2 mt-5 fw-bold fs-5"> <span class="fs-2"> <%= avi.Notes %> </span> / <span> 20</span></h6>
+									</div>
+								</div>
+							<% }) %> 
+						</div>
+						</div>
+					  </div>
+					</div>
+					
+				</body>
+
+
+
+
+
+
+			</div>
+		</div>
+
+	</body>
+
+</html>
