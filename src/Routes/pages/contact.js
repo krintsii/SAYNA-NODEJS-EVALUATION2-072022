@@ -11,7 +11,7 @@ module.exports = (app) => {
             if (err) throw err;
             else {
                 
-                console.log(result);
+                // console.log(result);
                 res.render('contact')
             }
         });
