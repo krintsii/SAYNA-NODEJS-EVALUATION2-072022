@@ -47,7 +47,7 @@
 					<h2>Notez la formation</h2>
 				
 				<div>
-				  <form action="/contact" method="post">
+				  <form  method="post">
 					<label for="fname">First Name</label>
 					<input type="text" id="fname" name="FirstName" placeholder="Your name..">
 				
@@ -82,5 +82,40 @@
 		</div>
 
 	</body>
+	<script>
+
+		const LastName = document.getElementById('lname');
+		const FirstName = document.getElementById('fname');
+		const Avis = document.getElementById('avis');
+		const Notes = document.getElementById('Note');
+		const formation = document.getElementById('formation');
+
+
+
+		function PostAvis(event) {
+			event.preventDefault();
+			const URL = "/api/newNotice";
+			const body = {
+				LastName: LastName.value,
+				FirstName:FirstName.value,
+				Avis:Avis.value,
+				Notes:Notes.value,
+				formation: formation.value
+			}
+			fetch(URL, {
+				headers: {
+					"Content-type": "application/Json",
+				},
+				
+				method: "POST",
+				body:JSON.stringify(body)
+				
+			}).then(result => result.json())
+			.then(avis => console.log(avis))
+			
+		}
+
+		document.querySelector('form').addEventListener('submit', PostAvis)
+	</script>
 
 </html>
