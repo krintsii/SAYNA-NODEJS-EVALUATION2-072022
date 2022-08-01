@@ -7,9 +7,9 @@ dans cette projet de backEnd je vous donne une petit explication:
     -readme
 
 dans le dossier src: 
-    -db
-    -public
-    -Routes
+    -/db/
+    -/public/
+    -/Routes/
 
 1- dans le db:
     le fichier mysql pour demarrer le base de données et connecter avec le base de donnée;
